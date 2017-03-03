@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <button onclick="alert(getHHMM(60000)[1])">hhhhhhhhhhhh</button>
+  <script>
+    function getHHMM(millisecond) {
+      var datMill =new Date("2000-01-01 00:00:00").getTime()+millisecond;
+      var date = new Date();
+      date.setTime(datMill);
+      var hh = date.getHours()
+      var mm = date.getMinutes()
+      return [hh,mm];
+    }
+  </script>
+</body>
+</html>

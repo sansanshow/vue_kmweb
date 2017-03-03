@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+  <title>时长控制</title>
+  <link rel="stylesheet" href="//cdn.bootcss.com/weui/0.4.3/style/weui.min.css">
+  <link rel="stylesheet" href="//cdn.bootcss.com/jquery-weui/0.8.0/css/jquery-weui.min.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div id="app">
+  <div class="container">
+    <div class="i_header" style="background-color: #ee000000">
+      <div class="i_left" @click="goback">返回</div>
+      <div class="i_title">
+        时长控制
+      </div>
+      <div class="i_right" @click="chkAll">
+        全选
+      </div>
+    </div>
+    <div class="weui_tab">
+      <div class="weui_navbar" style="position: fixed;top:52px">
+        <a class="weui_navbar_item weui_bar_item_on">
+          允许使用的应用
+        </a>
+        <a class="weui_navbar_item">
+          限制使用的应用
+        </a>
+      </div>
+      <div class="weui_tab_bd">
+        <div class="weui_grids">
+          <div class="weui_grid" v-for="item in 25">
+            <div class="weui_grid_icon">
+              <img src="../../static/img/index/icon_nav_cell.png" alt="">
+            </div>
+            <p class="weui_grid_label">
+              今日情况
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="//cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/jquery-weui/0.8.0/js/jquery-weui.min.js"></script>
+<script src="//cdn.bootcss.com/jquery-weui/0.8.0/js/swiper.min.js"></script>
+<script type="text/javascript" src="js/vue.min.js"></script>
+<script type="text/javascript" src="js/weui.js"></script>
+<script>
+  var vm = new Vue({
+    el: "#app",
+    data: {},
+    created: function () {
+
+    },
+    ready: function () {
+      document.body.setAttribute('ontouchstart', '');
+      $('.weui_tab').tab();
+    },
+    methods: {}
+  })
+</script>
+</body>
+</html>
